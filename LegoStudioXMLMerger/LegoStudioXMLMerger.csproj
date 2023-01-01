@@ -5,6 +5,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
 </Project>

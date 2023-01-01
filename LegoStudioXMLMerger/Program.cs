@@ -31,7 +31,7 @@ namespace LegoStudioXMLMerger
             {
                 if (file.StartsWith("-")) continue;
                 Dictionary<Item, int> partsList = new Dictionary<Item, int>();
-                var path = file.StartsWith("/") ? file : $"{currentDirectory}/{file}";
+                var path = file.StartsWith("/") || file.StartsWith("\\") || file[1] == ':' ? file : $"{currentDirectory}/{file}";
                 ValidateFile(currentDirectory, file);
                 ProcessFile(path, partsList, showFullStackTrace);
                 partsLists[i] = partsList;
@@ -83,7 +83,7 @@ namespace LegoStudioXMLMerger
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Saved to {fileName}");
                         Console.ResetColor();
-                        if (!fileName.StartsWith("/")) fileName = "/" + fileName;
+                        if (!fileName.StartsWith("/") || fileName.StartsWith("\\") || fileName[1] == ':') fileName = currentDirectory + fileName;
                         try
                         {
                             Process.Start("explorer.exe", $"/select,\"{fileName}\"");
@@ -145,6 +145,7 @@ namespace LegoStudioXMLMerger
                 }
                 else Console.WriteLine("Rerun the program with -s to see the whole stack trace.");
                 Console.ResetColor();
+                Environment.Exit(1);
             }
 
             XmlElement root = doc.DocumentElement;
