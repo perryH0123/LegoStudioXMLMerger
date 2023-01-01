@@ -33,6 +33,17 @@ namespace LegoStudioXMLMerger
         {
             return $"Item {Id} | Key {Key} | Color {Color}";
         }
+
+        public override int GetHashCode()
+        {
+			return Id.GetHashCode() + Key + Color;
+        }
+
+        public override bool Equals(object obj)
+        {
+			if (!(obj is Item)) return false;
+			return this.GetHashCode() == obj.GetHashCode();
+        }
     }
 }
 
