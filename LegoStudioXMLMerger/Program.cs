@@ -70,7 +70,7 @@ namespace LegoStudioXMLMerger
                     fDirectory = Console.ReadLine();
                     if (string.IsNullOrWhiteSpace(fDirectory))
                     {
-                        fDirectory = currentDirectory;
+                        fDirectory = currentDirectory + "/output";
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine($"Warning: Invalid directory name. Default directory [{currentDirectory}] used");
                         Console.ResetColor();
@@ -85,7 +85,10 @@ namespace LegoStudioXMLMerger
                         Console.WriteLine($"Saved to {fileName}");
                         Console.ResetColor();
                         if (!fileName.StartsWith("/")) fileName = "/" + fileName;
-                        Process.Start("explorer.exe", $"/select,\"{fileName}\"");
+                        try
+                        {
+                            Process.Start("explorer.exe", $"/select,\"{fileName}\"");
+                        }catch(Exception e) { };
 
                     } catch (Exception e)
                     {
