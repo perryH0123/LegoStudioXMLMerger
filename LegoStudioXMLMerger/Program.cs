@@ -127,6 +127,9 @@ namespace LegoStudioXMLMerger
         
         static void ProcessFile(string filePath, Dictionary<Item, int> partsList)
         {
+            //quick fix for windows
+            filePath = filePath.Replace("\"", "");
+            filePath = filePath.Replace("\'", "");
             XmlDocument doc = new XmlDocument();
             doc.Load(filePath);
             XmlElement root = doc.DocumentElement;
