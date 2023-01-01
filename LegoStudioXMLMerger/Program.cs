@@ -78,6 +78,7 @@ namespace LegoStudioXMLMerger
                     var xmlFile = DictionaryToXML(mergedPartList);
                     try
                     {
+                        if(!Directory.Exists(fDirectory)) Directory.CreateDirectory(fDirectory)
                         var fileName = $"{fDirectory}/{fName}.xml";
                         xmlFile.Save(fileName);
                         Console.ForegroundColor = ConsoleColor.Green;
