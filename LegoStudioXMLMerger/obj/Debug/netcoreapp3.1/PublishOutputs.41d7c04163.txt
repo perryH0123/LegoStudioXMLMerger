@@ -1,5 +1,0 @@
-/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/publish/LegoStudioXMLMerger
-/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/publish/LegoStudioXMLMerger.dll
-/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/publish/LegoStudioXMLMerger.deps.json
-/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/publish/LegoStudioXMLMerger.runtimeconfig.json
-/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/publish/LegoStudioXMLMerger.pdb
