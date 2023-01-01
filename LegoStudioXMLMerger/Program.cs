@@ -33,7 +33,7 @@ namespace LegoStudioXMLMerger
                 Dictionary<Item, int> partsList = new Dictionary<Item, int>();
                 var path = file.StartsWith("/") ? file : $"{currentDirectory}/{file}";
                 ValidateFile(currentDirectory, file);
-                ProcessFile(path, partsList);
+                ProcessFile(path, partsList, showFullStackTrace);
                 partsLists[i] = partsList;
                 defaultName += $"{ TrimAbsoluteFileNameAndExtension(file)}+";
                 i++;
@@ -56,7 +56,6 @@ namespace LegoStudioXMLMerger
                     string fName, fDirectory;
                     Console.Write("File name (don't include an extension or path): ");
                     fName = TrimAbsoluteFileNameAndExtension(Console.ReadLine());
-                    Console.WriteLine(fName);
                     if (string.IsNullOrWhiteSpace(fName)) 
                     {
                         fName = defaultName;
@@ -125,13 +124,29 @@ namespace LegoStudioXMLMerger
             }
         }
         
-        static void ProcessFile(string filePath, Dictionary<Item, int> partsList)
+        static void ProcessFile(string filePath, Dictionary<Item, int> partsList, bool showFullStackTrace = false)
         {
             //quick fix for windows
             filePath = filePath.Replace("\"", "");
             filePath = filePath.Replace("\'", "");
             XmlDocument doc = new XmlDocument();
-            doc.Load(filePath);
+            try
+            {
+                Stream s = new FileStream(filePath,FileMode.Open);
+                doc.Load(s);
+                s.Close();
+            } catch(Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"Error: Exception {e.GetType().ToString()} occured during loading file {filePath} with the following message: {e.Message}");
+                if (showFullStackTrace)
+                {
+                    Console.WriteLine(e.StackTrace);
+                }
+                else Console.WriteLine("Rerun the program with -s to see the whole stack trace.");
+                Console.ResetColor();
+            }
+
             XmlElement root = doc.DocumentElement;
             if(root.Name != "INVENTORY")
             {
