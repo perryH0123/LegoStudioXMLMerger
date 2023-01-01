@@ -1,0 +1,2 @@
+/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/win-x64/publish/LegoStudioXMLMerger.pdb
+/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/bin/Debug/netcoreapp3.1/win-x64/publish/LegoStudioXMLMerger.exe

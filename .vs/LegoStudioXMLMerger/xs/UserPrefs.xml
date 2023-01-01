@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{C4F60605-A49A-4FC0-887A-939DE47DAF43}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LegoStudioXMLMerger PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LegoStudioXMLMerger/Program.cs">
+    <Files>
+      <File FileName="LegoStudioXMLMerger/Program.cs" Line="91" Column="47" />
+      <File FileName="LegoStudioXMLMerger/Item.cs" Line="6" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LegoStudioXMLMerger" expanded="True">
+            <Node name="LegoStudioXMLMerger" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pyB4YNyKP+RcOavVMw6i40fByQlSBQ61kRBvP0OlgkpdIclnrlURjQE0nQiTgnsW64Sc10VTRWAhO54HlXyVxQ==",
+  "success": true,
+  "projectFilePath": "/Users/perry/projects/LegoStudioXMLMerger/LegoStudioXMLMerger/LegoStudioXMLMerger.csproj",
+  "expectedPackageFiles": [
+    "/Users/perry/.nuget/packages/microsoft.netcore.app.runtime.osx-x64/7.0.1/microsoft.netcore.app.runtime.osx-x64.7.0.1.nupkg.sha512",
+    "/Users/perry/.nuget/packages/microsoft.aspnetcore.app.runtime.osx-x64/7.0.1/microsoft.aspnetcore.app.runtime.osx-x64.7.0.1.nupkg.sha512",
+    "/Users/perry/.nuget/packages/microsoft.netcore.app.crossgen2.osx-arm64/7.0.1/microsoft.netcore.app.crossgen2.osx-arm64.7.0.1.nupkg.sha512",
+    "/Users/perry/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.1/microsoft.netcore.app.host.osx-x64.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
